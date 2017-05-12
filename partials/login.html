@@ -1,0 +1,35 @@
+<div class="bg-login">
+
+    <div class="geral login container animated fadeIn">
+
+
+        <section>
+            <div class="row meio">
+           
+                <div class="col-xs-12 col-sm-12 col-md-12 animated fadeInLeft">
+                	<input type="text" class="usuario" placeholder="CNPJ" name="cnpj"  ng-model="cnpj">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 animated fadeInUp">
+                    <input type="button" class="btnLogin" id="login" name="login" value="Extrair" ng-click="conectar()">
+                </div>
+               
+               	<div class="col-xs-12 col-sm-12 col-md-12 animated fadeInLeft">
+               		<h3 style="color: #ffffff">{{status}}</h3>
+               	</div>
+
+               	<div class="col-xs-12 col-sm-12 col-md-12 animated fadeInLeft" ng-show="dados.preenchido">
+               		<b>Nro inscrição:</b> {{dados.nroInscricao}} <br/><br/>
+               		<b>Abertura:</b> {{dados.abertura}}<br/><br/>
+               		<b>Nome Empresarial:</b> {{dados.nomeEmpresarial}}<br/><br/>
+					<b>Titulo:</b> {{dados.nomeFantasia}}<br/><br/>
+					<b>Codigo/Descricao Atividade:</b> {{dados.codDescAtividade}}<br/><br/>
+               	</div>
+
+            </div>  
+        </section><!-- /*meio -->
+
+    </div><!-- /*geral -->
+        
+
+</div>
+

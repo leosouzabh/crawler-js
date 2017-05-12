@@ -1,0 +1,49 @@
+<div class="geral internas container">
+
+    <header>
+      <div class="topo row">
+        <div class="banner">
+            <div class="col-xs-8 col-sm-8 col-md-8 txtLeft"><img src="img/boletos.png" /></div>
+            <div class="logo col-xs-4 col-sm-4 col-md-4"><img src="img/vertical-vert.png" /></div>
+            <div class="nome col-xs-12 col-sm-12 col-md-12">{{usuario.name}}</div>
+        </div>
+      </div>
+    </header><!-- /*topo -->
+
+    <section>
+        <div class="meio boletos">
+            <div class="barra-titulo row">
+                <div class="titulo col-xs-10 col-sm-11 col-md-11">Boletos Abertos</div>
+                <div class="ico-home col-xs-2 col-sm-1 col-md-1"><a href="#/home"><img src="img/ico-casa.png" /></a></div>
+            </div>
+
+            <div class="formulario row animated zoomIn" ng-repeat="boleto in boletos" ng-click="detalhes(boleto)" >
+                <div class="box col-xs-6 col-sm-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <label>Pagamento</label><br />
+                        <span>{{boleto.bolDataPagamento}}</span>
+                    </div>
+                </div>
+
+                <div class="box col-xs-6 col-sm-6 col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <label>Valor</label><br />
+                        <span>R$ {{boleto.bolValorPago}}</span>
+                    </div>
+                </div>      
+
+                <div class="box col-xs-12 col-sm-12 col-md-12">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <label>Número:</label> <span>{{boleto.bolNumero}}</span><br />
+                        <span class="small">{{boleto.bolDescricao}}</span>
+                    </div>
+                </div>
+                <div class="codigo-de-barra col-xs-12 col-sm-12 col-md-12">
+                    <i class="fa fa-barcode"></i> {{boleto.bolLinhaDigitavel}}
+                </div>
+            </div><!-- /* formularo boleto -->  
+
+                                               
+        </div>
+    </section><!-- /*meio -->
+</div>

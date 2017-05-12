@@ -1,0 +1,88 @@
+<div class="geral internas container animated fadeIn">
+
+    <header>
+      <div class="topo row">
+        <div class="banner">
+            <div class="col-xs-8 col-sm-8 col-md-8 txtLeft"></div>
+            <div class="logo col-xs-4 col-sm-4 col-md-4"><img src="img/vertical-vert.png" /></div>
+            <div class="nome col-xs-12 col-sm-12 col-md-12">{{usuario.name}}</div>
+        </div>
+
+        <div>
+            <div class="config col-xs-12 col-sm-12 col-md-12" >  
+                <img src="img/ico-config.png" ng-click="abrePopupSenha()"/>
+            </div>
+        </div>
+
+
+
+      </div>
+    </header><!-- /*topo -->
+
+    <section>
+        <div class="meio abertura">
+            <div class="barra-titulo animated slideInLeft">
+                <div class="titulo">ÁREA DO CLIENTE</div>       
+            </div>
+
+            <div class="area-cliente animated fadeInUp">
+                <div class="">
+                    <div class="financas col-xs-4 col-sm-4 col-md-4">
+                        <a href="#/financas"><img src="img/ico-financas.jpg" /></a>
+                    </div>
+
+                    <div class="enquete col-xs-4 col-sm-4 col-md-4">
+                        <a href="#/enquete"><img src="img/ico-enquetes.jpg" /></a>
+                    </div>
+
+                    <div class="contato col-xs-4 col-sm-4 col-md-4">
+                        <a href="#/contato"><img src="img/ico-contato.jpg" /></a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="btnVerde col-xs-12 col-sm-12 col-md-12">
+                        <a class="btn btn-default" href="#/falecomissao">FALE COM A COMISSÃO</a>
+                    </div>                    
+                    <div class="btnVerde col-xs-12 col-sm-12 col-md-12">
+                        <a class="btn btn-default" href="#/comprovante">ENVIAR COMPROVANTE</a>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section><!-- /*meio -->
+
+
+
+</div><!-- /*geral -->
+
+
+
+
+<div class="modal fade" id="modalSenha" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-primary" id="myModalLabel">Alterar Senha</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                        <input type="password" class="senha form-control" id="senha-atual" name="senha-atual" placeholder="Senha atual" value="" ng-model="senha.senhaAtual">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="senha form-control" id="nova-senha" name="nova-senha" placeholder="Nova senha" value=""  ng-model="senha.novaSenha">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="senha form-control" id="confirmar-nova-senha" name="confirmar-nova-senha" placeholder="Confirmar nova senha" 
+                            value="" ng-model="senha.repetirSenha">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" ng-click="alterarSenha()">Enviar</button>
+                  </div>
+                </div>
+              </div>
+            </div>

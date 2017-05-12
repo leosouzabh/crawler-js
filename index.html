@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Vertical Vert</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		
+		<link rel="stylesheet" href="css/animate.css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="css/estilo.css"/>
+
+		<script src="js/lib/angular.min.js"></script>        
+        <script src="js/lib/angular-route.min.js"></script>      
+        <script src="js/lib/angular-sanitize.min.js"></script>      
+        <script src="js/lib/angular-cookies.js"></script>      
+        <script src="js/lib/jquery-3.2.1.min.js"></script>      
+        
+		<script src="js/principal.js"></script>		
+		<script src="js/services/vertical-service.js"></script>
+
+		<script src="js/controllers/login-controller.js"></script>
+	
+		
+		<!--
+		<script src="js/controllers/dashboard-controller.js"></script>
+		<script src="js/controllers/msg-controller.js"></script>
+		<script src="js/controllers/modal-controller.js"></script>
+
+		<script src="js/controllers/view-controller.js"></script>	
+		-->
+
+		<script src="js/jquery_1_11_3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		
+	</head>
+	<body ng-app="verticalvert">
+		
+		<ng-view></ng-view>            
+		
+		<!-- Modal -->
+		<div class="modal fade" id="modalErro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title text-danger" id="myModalLabel">Erro</h4>
+		      </div>
+		      <div class="modal-body" ng-bind-html="msgErro"></div>		      
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title text-success" id="myModalLabel">Sucesso</h4>
+		      </div>
+		      <div class="modal-body" ng-bind-html="msgInfo"></div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-success" data-dismiss="modal">Fechar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		
+		
+		<div class="loader"></div>
+		
+
+	</body>
+	<script>
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {		
+    		var domElement = document.getElementsByTagName("body");
+    		angular.bootstrap(domElement, ["verticalvert"]);
+   		}
+
+        document.addEventListener("backbutton", function(e){
+			if (window.location.href.indexOf("login") != -1 || window.location.href.indexOf("splash") ) {
+				navigator.app.exitApp();
+
+			} else {
+				history.back();
+			}
+	    }, false);
+
+	    $(document).on("click", "#escolha", function() {
+			$('#escolha-select').slideDown();
+	        $('#arrecada-select').slideUp();
+		});
+
+		$(document).on("click", "#arrecadacao", function() {
+			$('#arrecada-select').slideDown();
+	        $('#escolha-select').slideUp();
+		});
+		$(document).on("click", "#avulso", function() {
+			$('#arrecada-select').slideUp();
+	        $('#escolha-select').slideUp();
+		});
+	    
+	</script>
+
+</html>

@@ -1,0 +1,39 @@
+<div class="geral internas container">
+
+    <header>
+      <div class="topo row">
+        <div class="banner">
+            <div class="col-xs-8 col-sm-8 col-md-8 txtLeft"><img src="img/enquete.png" /></div>
+            <div class="logo col-xs-4 col-sm-4 col-md-4"><img src="img/vertical-vert.png" /></div>
+            <div class="nome col-xs-12 col-sm-12 col-md-12">{{usuario.name}}</div>
+        </div>
+      </div>
+    </header><!-- /*topo -->
+
+    <section>
+        <div class="meio enquete lista">
+            <div class="barra-titulo row">
+                <div class="titulo col-xs-10 col-sm-11 col-md-11">Enquetes</div>
+                <div class="ico-home col-xs-2 col-sm-1 col-md-1"><a href="#/home"><img src="img/ico-casa.png" /></a></div>
+            </div>
+
+            <div class="nav row">
+                <ul>
+                    <li ng-repeat="enquete in enquete.abertas" class="col-xs-12 col-sm-12 col-md-12  ng-binding ng-scope">
+                        {{enquete.pergunta}}
+                        <div class="botoes">
+                            <a class="votar btn btn-block" ng-click="votar(enquete)">Votar</a>
+                        </div>
+                    </li>
+                    <li ng-repeat="enquete in enquete.respondidas" class="col-xs-12 col-sm-12 col-md-12  ng-binding ng-scope">
+                        {{enquete.pergunta}}
+                        <div class="botoes">
+                            <a class="resultado btn btn-block" ng-click="resultado(enquete)">Resultado</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+    </section><!-- /*meio -->
+
+</div><!-- /*geral -->

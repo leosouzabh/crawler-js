@@ -1,0 +1,771 @@
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-bold-webfont.eot');
+    src: url('../fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-bold-webfont.woff') format('woff'),
+         url('../fonts/roboto-bold-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.eot');
+    src: url('../fonts/roboto-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff'),
+         url('../fonts/roboto-light-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium-webfont.eot');
+    src: url('../fonts/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-medium-webfont.woff') format('woff'),
+         url('../fonts/roboto-medium-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-medium-webfont.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  border:0;
+  font-family: 'robotoregular', Arial, Tahoma, Verdana;
+  font-size: 16px;
+  color: #fff;
+  text-align:center;
+  background-color:#fff;
+  /*background-image: url(../img/bg-formandos.png), url(../img/background-tile.png);*/
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+a {
+  color:#0065A3;
+  text-decoration:underline;
+  font-weight:normal;
+}
+
+a:hover {
+  color:#0896F1;
+  text-decoration:none;
+}
+
+/**** CLASSES FUNCIONAIS ****/ 
+.dNone {display: none;}
+.dBlock {display: block;}
+.dInline {display: inline;}
+.dInlineBlock {display: inline-block;}
+
+.fLeft {float: left;}
+.fRight {float: right;}
+
+.wFull {width: 100%;}
+.wHalf {width: 50%;}
+
+.pAbsolute {position: absolute;}
+.pRelative {position: relative;}
+
+.clearfix {clear: both;}
+
+.txtAlignLeft, .txtLeft {text-align: left;}
+.txtAlignRight, .txtRight {text-align: right;}
+.txtAlignCenter, .txtCenter {text-align: center;}
+
+.light {font-weight: 300;}
+.regular {font-weight: 400;}
+.semibold {font-weight: 600;}
+.bold {font-weight: 700;}
+.extrabold {font-weight: 800;}
+
+.small { font-size:14px !important; }
+.small2x { font-size:13px !important; }
+.small3x { font-size:11px !important; }
+
+* { margin:0px auto; padding: 0px; box-sizing:border-box; }
+p { margin: 0px; }
+
+hr { border:0; border-bottom:1px dotted #999999; height:1px; background-color:#FFF; }
+h1, h3, h4, h5, h6 { color: #333; }
+
+img {
+  border:0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+::-moz-selection { background:#3BAFF6; color:#ffffff; }
+::selection { background:#3BAFF6; color:#ffffff; }
+ 
+table tr td { 
+  font-size:16px;
+  font-family: Arial, Tahoma, Verdana;     
+  vertical-align:top;
+  text-align:left;
+}
+
+/**** MODAL ****/
+.modal-body {
+  color: #666;
+}
+
+ 
+/**** GERAL ****/
+.geral { 
+  max-height: 700px;  
+}  
+
+
+/**** MEIO ****/       
+.meio {
+  text-align:left;
+}
+
+.meio .barra-titulo {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}  
+
+.meio .botoes {
+  width: 100%;
+  float: left;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  -o-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;  
+}
+
+.meio .botoes .votar {
+  background-color: #0a639b;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 0;
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  box-shadow: 0 0 4px #333;
+}
+
+
+/**** LOGIN ****/
+.bg-login { background-color:#0A4468; 
+  min-height: 100%;
+  height:100%;
+   width:100%;
+   position:absolute;
+   overflow:hidden;
+}
+
+.login .topo {
+  padding:0;
+} 
+                  
+.login .logo {
+  display:block;
+  max-width: 50%;
+  margin-top: 40px;
+  /*margin-bottom: 40px;*/
+}
+
+.login .logo img {
+  float: none;
+  max-width: 100%;
+}
+
+.login .esqueceuSenha {
+  text-align: center;
+  color: #939393;
+  margin-top: 10px;
+}
+
+.login .esqueceuSenha a {
+  color: #939393;
+  text-decoration: none;
+}  
+
+.login input {
+  border: 0;
+  background-color: #b6c7d2;
+
+  width: 100%;
+  line-height: 60px;        
+  margin-bottom:10px;
+  color:#666666; 
+
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+}
+
+.login .usuario,
+.login .senha { 
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  background-size: 80px;
+  padding:0 20px 0 125px;
+}
+
+.login .usuario { background-image : url(../img/icone-user.png); }
+.login .senha { background-image : url(../img/icone-password.png); }
+      
+.login .btnLogin {
+  border:1px solid #64AE30;
+  background-color: #73C543;
+  color: #fff;
+  font-size: 25px;
+  cursor:pointer;    
+}
+
+.login .meio { 
+  margin-top: 40px;
+}
+
+
+/**** ESQUECEU SENHA ****/
+.esqueceu-senha .logo {
+  max-width: 40%;
+}
+
+.esqueceu-senha .meio { 
+  margin-top: 20px;
+}
+
+.aviso-senha {
+  color: #999;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.esqueceu-senha .usuario { background-image : url(../img/icone-email.png); }
+
+.esqueceu-senha .btnLogin {
+  font-size: 20px;
+}
+
+
+/**** LOADER ****/
+                  
+.loading .logo {
+  display:block;
+  margin-top: 50%;
+  opacity: 0.2;
+}
+
+.loader::before {
+  content: '';
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  
+  z-index: 1;
+
+  background-color: #333;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.loader {
+  background-image : url(../img/ajax-loader.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  display:none;
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+  left:50%;
+  top:50%;
+  z-index: 2;
+
+  margin:-25px 0 0 -25px;
+  border:0;
+} 
+
+/**** SPLASH ****/                 
+.splash .logo-splash {
+  display:block;
+  margin-top: 50%;
+}
+
+
+/**** PAGINAS ****/
+.internas {
+  background-color: #fff;
+}
+
+.banner {
+  background-color: #f1f0ef;
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.banner .txtLeft img {
+  width: 80%;
+}                  
+.logo {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.logo img {
+  float: right !important;
+  max-width: 90%;
+}
+
+.nome {
+  text-align: right;
+  color: #3d3e3e;
+  font-size: 20px;
+}
+
+.config {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.config img {
+  float: right;
+  width: 30px;
+  height: 30px;
+}
+
+.nav {
+  color: #6A6A6A;
+  font-size: 16px;
+  margin: 0 auto;
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  background-color: #eee;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;  
+}
+
+.nav ul li a {
+  display: block;
+  color: #6A6A6A;
+  text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+/**** ABERTURA ****/
+.abertura .barra-titulo {
+  background-image : url(../img/barra-azul-titulo.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-color: #1F7A99;
+  padding: 15px 0 15px 10px;
+}
+
+.abertura .area-cliente {
+  background-color: #f1f0ef;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.abertura .btnVerde a {
+  background-color: #083844; 
+  width: 90%;
+  color: #fff;
+  text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 5%;
+  border: 0;
+}
+
+.abertura .btnCinza a {
+  background-color: #3d3e3e; 
+  width: 90%;
+  color: #fff;
+  text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 5%;
+  border: 0;
+}
+
+.abertura .btnVerde a:hover, .abertura .btnVerde a:focus,
+.abertura .btnCinza a:hover, .abertura .btnCinza a:focus {
+  opacity: 0.8;
+}
+
+
+/**** SITUACAO FINANCEIRA ***/
+.meio.situacaoFinanceira {
+  padding-bottom: 15px;
+}
+
+.situacaoFinanceira .barra-titulo {
+  margin: 15px 0;
+}  
+
+.situacaoFinanceira .barra-titulo .titulo {
+  color: #71C5F7;
+  font-size: 31px;
+  margin-top: 10px;
+}
+
+
+/**** ENQUETE ****/
+/*.enquete .barra-titulo {
+  margin-top: 30px;
+  margin-bottom: 30px;
+} */ 
+
+.enquete .barra-titulo .titulo {
+  color: #000;
+  font-size: 16px;
+}
+
+.enquete .nav {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;  
+  overflow: hidden;
+}
+
+.enquete .nav ul li {
+  margin: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.enquete .nav ul li:last-child,
+.enquete .nav ul li.last {
+  border-bottom: 0;
+}
+
+.enquete .nav ul li a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.enquete .nav ul li a i {
+  background-image: url(../img/checkboxes.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 20px;
+
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  margin-right: 15px;
+}
+
+.enquete .nav ul li a.on i {
+  background-position: left top;
+}
+
+.enquete .botoes {
+  width: 100%;
+  float: left;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.enquete .botoes .votar,
+.enquete .botoes .resultado {
+  color: #fff;
+  text-align: center;
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  box-shadow: 0 0 4px #333;
+
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.enquete .botoes .votar { background-color: #0a639b; }
+.enquete .botoes .resultado { background-color: #ff4451; }
+
+.enquete.lista .titulo {
+  color: #2FD8FC;
+}
+
+.enquete.lista li,
+.enquete.resposta li {
+  padding-top: 10px;
+  padding-bottom: 10px; 
+}
+
+.enquete.lista .botoes {
+  width: auto;
+  float: right;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.enquete.lista .botoes .votar,
+.enquete.lista .botoes .resultado {
+  padding: 0px 25px;
+}
+
+
+
+/**** CONTATO ****/
+.contato .barra-titulo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}  
+
+.contato .barra-titulo .titulo {
+  color: #3faced;
+}
+
+.contato .menu {
+  margin-bottom: 20px;
+}
+
+.contato .menu img {
+  height: 80px;
+}
+
+.contato .form-group {
+  margin-bottom: 5px;
+}
+
+.contato .form-group textarea {
+  background-color: #F3F3F3;
+  height: 80px;
+}
+
+.contato .botoes {
+  width: 100%;
+  float: left;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contato .botoes .votar {
+  background-color: #0a639b;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 0;
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  box-shadow: 0 0 4px #333;
+}
+
+
+/**** FALE COM A COMISSAO ****/
+.comissao .barra-titulo {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}  
+
+.comissao .barra-titulo .titulo {
+  color: #3faced;
+}
+
+.comissao .formulario {
+  -o-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.comissao .menu {
+  margin-bottom: 20px;
+}
+
+.comissao .menu img {
+  height: 80px;
+}
+
+.comissao .form-group {
+  margin-bottom: 5px;
+}
+
+.comissao .form-group textarea {
+  background-color: #F3F3F3;
+  height: 80px;
+}
+
+.comissao .botoes {
+  width: 100%;
+  float: left;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  -o-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;  
+}
+
+.comissao .botoes .votar {
+  background-color: #0a639b;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 0;
+
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  box-shadow: 0 0 4px #333;
+}
+
+
+/**** BOLETOS ****/
+.boletos {
+  color: #666;
+}
+
+.boletos .formulario {
+  background-color: #eee;
+  margin: 0 0 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+
+  -o-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;  
+}
+
+.boletos .formulario .box {
+  margin-bottom: 10px;
+}
+
+.boletos .formulario .box div {
+  background-color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;    
+  border-radius: 5px;
+  border: 2px solid #ddd;
+}
+
+.boletos .formulario .box label {
+  font-weight: 100;
+}
+
+.boletos .formulario .box span {
+  font-size: 18px;
+}
+
+.boletos .formulario .codigo-de-barra {
+  font-size: 14px;
+}
+
+
+/**** COMPROVANTES ****/
+.comprovantes .tipo-comprovante {
+  background-color: #eee;
+  display: inline-block;
+  padding: 5px 10px 0 10px;
+  width: 100%;
+  color: #666;
+}
+
+.comprovantes .file {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.comprovantes .input-file {
+  background-color: #eee;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.comprovantes .formulario {
+  -o-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;  
+}
+
+.comprovantes .selects {
+  margin-top: 15px;
+}
+
+.comprovantes option {
+  padding: 5px;
+}
+
+
+
+/***********MEDIA QUERIES*********************/
+@media only screen  and(min-width: 940px) {
+
+}
+
+@media only screen and (max-width: 949px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+  .situacaoFinanceira .barra-titulo .titulo {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  .situacaoFinanceira .barra-titulo .titulo {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+
+}      
+
+header{
+  margin-bottom: 1em;
+}

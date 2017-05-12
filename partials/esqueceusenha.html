@@ -1,0 +1,38 @@
+<div class="bg-login">
+    <div class="geral login esqueceu-senha container animated fadeIn">
+
+        <header>
+          <div class="row topo">
+            <div class="logo">
+                <img src="img/vertical-vert.png" />
+            </div>
+          </div>
+        </header><!-- /*topo -->
+
+        <section>
+            <div class="row meio">
+                <div class="col-xs-12 col-sm-12 col-md-12 txtCenter aviso-senha">
+                    Informe o endereço de e-mail associado à sua conta de usuário. Em seguida, enviaremos um email com seu usuário e senha.
+                </div>
+           
+
+
+                <div class="col-xs-12 col-sm-12 col-md-12 animated fadeInDown">
+                    <input type="email" id="email" placeholder="Email" name="email"  
+                                ng-model="form.email" ng-required="true" class="usuario" >
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 animated fadeInUp">
+                    <input type="submit" class="btnLogin" id="login" name="login" value="Enviar Senha" ng-click="esqueceuSenha()"/>
+                </div>
+
+                <div class="esqueceuSenha">
+                    <a href="#/login">Voltar</a>
+                </div>
+            </div>  
+        </section><!-- /*meio -->
+
+    </div><!-- /*geral -->
+</div><!-- /*geral -->    
+
+

@@ -1,0 +1,81 @@
+<div class="geral internas container">
+
+    <header>
+      <div class="topo row">
+        <div class="banner">
+            <div class="col-xs-8 col-sm-8 col-md-8 txtLeft"><img src="img/contatos.png" /></div>
+            <div class="logo col-xs-4 col-sm-4 col-md-4"><img src="img/vertical-vert.png" /></div>
+            <div class="nome col-xs-12 col-sm-12 col-md-12">{{usuario.name}}</div>
+        </div>
+      </div>
+    </header><!-- /*topo -->
+
+    <section>
+        <div class="meio contato">
+            <div class="barra-titulo row">
+                <div class="titulo col-xs-10 col-sm-11 col-md-11">Escolha uma das opções abaixo</div>
+                <div class="ico-home col-xs-2 col-sm-1 col-md-1"><a href="#/home"><img src="img/ico-casa.png" /></a></div>
+            </div>
+
+            <div class="menu row">
+                <ul>
+                    <li class="col-xs-6 col-sm-6 col-md-6 animated fadeInLeft">
+                        <a href="geo:-19.930762,-43.980289?q=-19.930762,-43.980289(Vertical Vert)"><img src="img/contato_localizacao.jpg" class="img-responsive" /></a>
+                    </li>
+
+                    <li class="col-xs-6 col-sm-6 col-md-6 animated fadeInRight">
+                        <a ng-click="abrePopupContato()"><img src="img/contato_fone.jpg" class="img-responsive" /></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="formulario row animated fadeInUp">
+                <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                    <input type="text" id="nome" class="form-control" placeholder="Nome" name="nome" ng-model="contato.nome">
+                </div>
+                
+                <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                    <input type="text" id="email" class="form-control" placeholder="E-mail" name="email" ng-model="contato.email">
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                    <input type="text" id="telefone" class="form-control" placeholder="Telefone" name="telefone" ng-model="contato.telefone">
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                    <input type="text" id="assunto" class="form-control" placeholder="Assunto" name="assunto" ng-model="contato.assunto">
+                </div>
+
+                <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                    <textarea id="mensagem" class="form-control" placeholder="Mensagem" name="mensagem" ng-model="contato.mensagem"></textarea>
+                </div>                                              
+            </div>
+
+        <div class="botoes col-xs-12 col-sm-12 col-md-12 animated fadeInDown">
+            <div class="col-xs-12 col-sm-12 col-md-12 txtAlignCenter">
+                    <a class="votar btn btn-block" ng-click="enviar()">Enviar</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- /*meio -->
+
+</div><!-- /*geral -->
+
+
+<div class="modal fade" id="modalContato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-primary" id="myModalLabel">E-mail e Telefones</h4>
+      </div>
+      <div class="modal-body">
+            <h5>Email: verticalvert@verticalvert.com.br</h5>
+            <h5>Telefone: (31)3313-2780</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
