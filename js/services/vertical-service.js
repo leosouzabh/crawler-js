@@ -8,7 +8,7 @@ angular.module('verticalService', [])
 					method: 'POST',
 					url: 'http://2captcha.com/in.php',
 					data: {
-						'key': 'f11c53b3b8206951bd779e61918f2d68',
+						'key': '',
 						'method': 'base64',
 						'body': captchaBase64
 					}
@@ -21,7 +21,7 @@ angular.module('verticalService', [])
 					var status = retorno[0];
 					var idCallback = retorno[1];
 					if ( retorno[0] == "OK"){
-						var urlGet = 'http://2captcha.com/res.php?key=f11c53b3b8206951bd779e61918f2d68&action=get&id='+idCallback;
+						var urlGet = 'http://2captcha.com/res.php?key=&action=get&id='+idCallback;
 						var tempoEntreTentativas = 10000;
 						setTimeout(()=>{
 							$http.get(urlGet)
